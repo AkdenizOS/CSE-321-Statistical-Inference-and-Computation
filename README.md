@@ -56,42 +56,60 @@ and `problems-for-final.pdf` come from the instructor — they are the closest t
 to knowing what will be asked.
 
 **4. Then [`exams/practice/`](exams/practice/)** for extra sets from other courses
-and universities, and [`exams/past/`](exams/past/) for photographs of real papers.
+and universities, and [`exams/`](exams/README.md) for photographs of real papers.
 
-**5. Write under `## My notes`** at the bottom of each topic note. Everything above
-that line is shared; below it is yours.
+**5. Write under your own `## Notes — <Name> (<term>)` heading** at the bottom of
+each topic note. Everything above that heading is shared; below it is yours — see
+[Taking notes](#taking-notes).
 
 ## Layout
 
-| Path | What it holds |
-|------|---------------|
-| [`weeks/`](weeks/) | The study plan, one note per topic |
-| [`docs/`](docs/) | Course summary, resource map, glossary |
-| [`resources/books/`](resources/books/) | McClave & Sincich (official), Walpole (supplementary) |
-| [`resources/lecture-notes/`](resources/lecture-notes/) | The instructor's slides, chapter by chapter |
-| [`resources/supplement/`](resources/supplement/) | Topic summaries, descriptive statistics through hypothesis testing |
-| [`exams/prep/`](exams/prep/) | The instructor's pre-exam problem sets |
-| [`exams/practice/`](exams/practice/) | Practice exams from elsewhere |
-| [`exams/past/`](exams/past/) | Photographs of real papers |
-| [`terms/`](terms/) | One folder per cohort — put your term's material here |
+```
+README.md        This page
+course-info.md   Resource map (textbook page offsets, topic → chapter), Turkish ↔ English glossary
+weeks/NN-*.md    One file per topic: the shared plan on top, everyone's notes below
+exams/           Photographs of real papers, prep/ (the instructor's pre-exam problem sets), practice/ (practice exams from elsewhere)
+resources/       books/ (McClave & Sincich official, Walpole supplementary), lecture-notes/ (the instructor's slides, chapter by chapter), supplement/ (topic summaries, descriptive statistics through hypothesis testing)
+```
+
+## Taking notes
+
+Open the topic, scroll to the bottom, write under your own heading:
+
+```markdown
+## Notes — <Name> (<term>)
+### Lecture
+### Worked out by hand
+### Questions
+### Exam-worthy
+```
+
+Add your heading below the existing ones and never edit someone else's section —
+different sections merge in git without conflicts.
 
 ## Who changes what
 
-| File | Who edits it | When |
+| What | Who edits it | When |
 |------|-------------|------|
-| `weeks/NN-*.md` | **anyone** | Only when the course itself changes — a new topic, a better reading, a correction. Never for personal notes. |
-| `docs/*.md` | **anyone** | When you learn something durable: a new exam pattern, a better source. |
-| `terms/<your-term>/people/<you>/notes/week-NN.md` | **only you** | Every week. This is your notebook. |
-| `terms/<your-term>/people/<you>/` | **only you** | Your assignments, projects, submissions. |
-| `terms/<your-term>/course/` | **anyone in that term** | Slides, syllabus and lab sheets the instructor issued. |
-| `exams/past/<term>/` | **anyone** | When you get hold of a new paper — blank or answered. Exam papers never go under `terms/`. |
+| Top of `weeks/NN-*.md` (goals, reading, practice) | **anyone** | Only when the course itself changes — a new topic, a better reading, a correction. Never for personal notes. |
+| `## Notes — <you>` in a week file | **only you** | Every week. This is your notebook. |
+| `course-info.md`, `exams/README.md` | **anyone** | When you learn something durable: a new exam pattern, a better source. |
+| `assignments/<term>-<you>-*` | **only you** | Your assignments, projects, submissions, if the course has them. Use a lowercase, hyphenated name — `efe-kurucay`, not `Efe Kuruçay`. Only work you produced yourself belongs here. |
+| `resources/<term>/` | **anyone in that term** | Slides, syllabus and lab sheets the instructor issued that term — the same for everyone taking the course then. |
+| `exams/` | **anyone** | When you get hold of a new paper — blank or answered. Exam papers never go under `assignments/`. Put the writer's surname in the filename (`2025-final-answered-altungoz.pdf`). |
 
 Two students in different years never touch the same file except to improve the
 shared plan — which is the point.
 
+## Terms
+
+| Term | Instructor | Schedule | Midterm | Final | Notes |
+|------|-----------|----------|---------|-------|-------|
+| Fall 2026-2027 | TBD — fill in during week 1 | TBD | TBD | TBD | Efe — in every week file |
+
 ## Contributing
 
-Taking the course now? Create `terms/<YYYY>-<YYYY>-<term>/` with a `README.md`
-naming the instructor and dates, and put your notes, papers and photographs there.
-Add new exam papers to `exams/past/<term>/`. Keep `weeks/` and `docs/` general —
-they are the shared plan and should improve every year.
+Taking the course now? Add a row for your term to the table above naming the
+instructor and dates, write your notes in the week files, and put your papers and
+photographs in [`exams/`](exams/README.md). Keep the top of each `weeks/` file and
+`course-info.md` general — they are the shared plan and should improve every year.
